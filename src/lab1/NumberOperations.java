@@ -40,7 +40,7 @@ public class NumberOperations {
         printList(Numbers, 0, "All numbers like integers: ");
         printList(Numbers, 1, "All numbers like floats: ");
 
-        HashMap<Class<?>, ArrayList<? super Number>> numlists = new HashMap<>(); 
+        HashMap<Class<?>, ArrayList<Number>> numlists = new HashMap<>(); 
         numlists.put(Integer.class, new ArrayList<Number>());
         numlists.put(Double.class, new ArrayList<Number>());
         numlists.put(Float.class, new ArrayList<Number>());
