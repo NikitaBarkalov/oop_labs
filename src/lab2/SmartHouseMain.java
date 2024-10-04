@@ -10,11 +10,14 @@ public class SmartHouseMain{
                                      new SecurityCameras("bedroom"), 
                                      new SecurityCameras("living room")};
         System.out.println("");
-
+ 
         // Examples of work
         light.turnOn();
-        light.changeParam("cyan", "color");
-        light.changeParam(70, "brightness");
+        System.out.println("\nTrying to change color to pink:");
+        light.changeParam("pink", "color");
+        light.getStatus();
+        System.out.println("\nTrying to change color to blue: ");
+        light.changeParam("blue", "color");
         light.getStatus();
         light.turnOff();
         System.out.println("");
