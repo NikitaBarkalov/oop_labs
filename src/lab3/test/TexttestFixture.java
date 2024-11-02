@@ -1,6 +1,7 @@
 package lab3.test;
 
-import lab3.main.*;
+import lab3.main.additionalFeatures.*;
+import lab3.main.items.*;
 
 public class TexttestFixture {
     public static void main(String[] args) {
@@ -31,7 +32,6 @@ public class TexttestFixture {
                 new BackastagePasses(5, 49),                // sellIn 4, quality 50
                 new BackastagePasses(1, 6),                 // sellIn 0, quality 9
                 new BackastagePasses(0, 50),                // sellIn -1, quality 0
-                // this conjured item does not work properly yet
                 new ConjuredManaCake(10, 10),               // sellIn 9, quality 8
                 new ConjuredManaCake(10, 1),                // sellIn 9, quality 0
                 new ConjuredManaCake(1, 10),                // sellIn 0, quality 8

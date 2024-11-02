@@ -1,4 +1,4 @@
-package lab3.main;
+package lab3.main.items;
 
 public class Sulfuras extends Item {
     public Sulfuras(int sellIn) {

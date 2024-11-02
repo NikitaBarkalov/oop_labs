@@ -1,4 +1,4 @@
-package lab3.main;
+package lab3.main.additionalFeatures;
 
 public class QualityValidator {
     private static int validateNotNegativeQuality(int quality) {

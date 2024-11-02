@@ -1,4 +1,6 @@
-package lab3.main;
+package lab3.main.items;
+
+import lab3.main.additionalFeatures.QualityValidator;
 
 public class ConjuredManaCake extends Item {
     public ConjuredManaCake(int sellIn, int quality) {

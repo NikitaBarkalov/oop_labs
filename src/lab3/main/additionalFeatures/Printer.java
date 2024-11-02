@@ -1,4 +1,6 @@
-package lab3.main;
+package lab3.main.additionalFeatures;
+
+import lab3.main.items.*;
 
 public class Printer {
     public static void printItems(Item[] items, int dayNumber) {

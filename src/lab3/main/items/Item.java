@@ -1,4 +1,6 @@
-package lab3.main;
+package lab3.main.items;
+
+import lab3.main.additionalFeatures.*;
 
 public class Item {
 
