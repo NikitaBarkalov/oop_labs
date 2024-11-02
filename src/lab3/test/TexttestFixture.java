@@ -6,25 +6,42 @@ public class TexttestFixture {
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
 
-        Item[] items = new Item[] {
-                new Item("+5 Dexterity Vest", 10, 20), //
-                new Item("Aged Brie", 2, 0), //
-                new Item("Elixir of the Mongoose", 5, 7), //
-                new Item("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new Item("Sulfuras, Hand of Ragnaros", -1, 80),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+        // test items for *MANUAL* testing code while refactoring
+        Item[] items = new Item[] {                                        // after one day expected:
+                new Item("+5 Dexterity Vest", 10, 20), // sellIn 9, quality 19 
+                new Item("+6 Dexterity Vest", 0, 5),   // sellIn -1, quality 3
+                new Item("+7 Dexterity Vest", 1, 5),   // sellIn 0, quality 4
+                new Item("+8 Dexterity Vest", 10, 0),  // sellIn 9, quality 0
+                new Item("+9 Dexterity Vest", 0, 0),   // sellIn -1, quality 0
+                new AgedBrie(10, 0),                        // sellIn 9, quality 1
+                new AgedBrie(0, 49),                        // sellIn -1, quality 50
+                new AgedBrie(0, 25),                        // sellIn -1, quality 27
+                new AgedBrie(10, 50),                       // sellIn 9, quality 50
+                new Sulfuras(1),                                    // sellIn 1, quality 80
+                new Sulfuras(0),                                    // sellIn 0, quality 80
+                new Sulfuras(-1),                                          // sellIn -1, quality 80
+                new BackastagePasses(15, 20),               // sellIn 14, quality 21
+                new BackastagePasses(15, 50),               // sellIn 14, quality 50
+                new BackastagePasses(11, 40),               // sellIn 10, quality 41
+                new BackastagePasses(10, 40),               // sellIn 9, quality 42
+                new BackastagePasses(10, 49),               // sellIn 9, quality 50
+                new BackastagePasses(6, 40),                // sellIn 5, quality 42
+                new BackastagePasses(5, 40),                // sellIn 4, quality 43
+                new BackastagePasses(5, 48),                // sellIn 4, quality 50
+                new BackastagePasses(5, 49),                // sellIn 4, quality 50
+                new BackastagePasses(1, 6),                 // sellIn 0, quality 9
+                new BackastagePasses(0, 50),                // sellIn -1, quality 0
                 // this conjured item does not work properly yet
-                new Item("Conjured Mana Cake", 3, 6) };
+                new ConjuredManaCake(10, 10),
+                new ConjuredManaCake(10, 1),
+                new ConjuredManaCake(1, 10),
+                new ConjuredManaCake(0, 10),
+                new ConjuredManaCake(0, 2)
+            };
 
         GildedRose app = new GildedRose(items);
 
         int days = 2;
-        if (args.length > 0) {
-            days = Integer.parseInt(args[0]) + 1;
-        }
-
         for (int i = 0; i < days; i++) {
             System.out.println("-------- day " + i + " --------");
             System.out.println("name, sellIn, quality");
