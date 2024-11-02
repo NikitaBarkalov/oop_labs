@@ -32,7 +32,7 @@ public class TexttestFixture {
                 new BackastagePasses(1, 6),                 // sellIn 0, quality 9
                 new BackastagePasses(0, 50),                // sellIn -1, quality 0
                 // this conjured item does not work properly yet
-                new ConjuredManaCake(10, 10),
+                new ConjuredManaCake(10, 10),               
                 new ConjuredManaCake(10, 1),
                 new ConjuredManaCake(1, 10),
                 new ConjuredManaCake(0, 10),
@@ -42,13 +42,8 @@ public class TexttestFixture {
         GildedRose app = new GildedRose(items);
 
         int days = 2;
-        for (int i = 0; i < days; i++) {
-            System.out.println("-------- day " + i + " --------");
-            System.out.println("name, sellIn, quality");
-            for (Item item : items) {
-                System.out.println(item);
-            }
-            System.out.println();
+        for (int numberDay = 0; numberDay < days; numberDay++) {
+            Printer.printItems(items, numberDay);
             app.updateQuality();
         }
     }
