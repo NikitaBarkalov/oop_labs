@@ -32,11 +32,11 @@ public class TexttestFixture {
                 new BackastagePasses(1, 6),                 // sellIn 0, quality 9
                 new BackastagePasses(0, 50),                // sellIn -1, quality 0
                 // this conjured item does not work properly yet
-                new ConjuredManaCake(10, 10),               
-                new ConjuredManaCake(10, 1),
-                new ConjuredManaCake(1, 10),
-                new ConjuredManaCake(0, 10),
-                new ConjuredManaCake(0, 2)
+                new ConjuredManaCake(10, 10),               // sellIn 9, quality 8
+                new ConjuredManaCake(10, 1),                // sellIn 9, quality 0
+                new ConjuredManaCake(1, 10),                // sellIn 0, quality 8
+                new ConjuredManaCake(0, 10),                // sellIn -1, quality 6
+                new ConjuredManaCake(0, 2)                  // sellIn -1, quality 0
             };
 
         GildedRose app = new GildedRose(items);
