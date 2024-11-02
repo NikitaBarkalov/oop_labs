@@ -16,21 +16,21 @@ public class BackastagePasses extends Item {
 
     private int updateQualityWhenSellInMoreThan10() {
         if (sellIn > 10) {
-            return QualityValidator.validateNotMoreThan50Quality(++quality);
+            return QualityValidator.validateQualityInCorrectRange(++quality);
         }
         return quality;
     }
 
     private int updateQualityWhenSellInBetween5And10() {
         if (sellIn > 5 && sellIn <= 10) {
-            return QualityValidator.validateNotMoreThan50Quality(quality + 2);
+            return QualityValidator.validateQualityInCorrectRange(quality + 2);
         }
         return quality;
     }
 
     private int updateQualityWhenSellInBetween0And5() {
         if (sellIn > 0 && sellIn <= 5) {
-            return QualityValidator.validateNotMoreThan50Quality(quality + 3);
+            return QualityValidator.validateQualityInCorrectRange(quality + 3);
         }
         return quality;
     }

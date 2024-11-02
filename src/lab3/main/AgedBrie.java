@@ -8,8 +8,8 @@ public class AgedBrie extends Item {
     @Override
     public int updateQuality() {
         if (sellIn > 0) {
-            return QualityValidator.validateNotMoreThan50Quality(++quality);
+            return QualityValidator.validateQualityInCorrectRange(++quality);
         }
-        return QualityValidator.validateNotMoreThan50Quality(quality + 2);
+        return QualityValidator.validateQualityInCorrectRange(quality + 2);
     }
 }

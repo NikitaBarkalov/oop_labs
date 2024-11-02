@@ -16,9 +16,9 @@ public class Item {
 
     public int updateQuality() {
         if (sellIn > 0) {
-            return QualityValidator.validateNotNegativeQuality(--quality);
+            return QualityValidator.validateQualityInCorrectRange(--quality);
         }
-        return QualityValidator.validateNotNegativeQuality(quality - 2);
+        return QualityValidator.validateQualityInCorrectRange(quality - 2);
     }
 
     public int updateSellIn() {

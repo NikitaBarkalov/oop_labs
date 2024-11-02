@@ -8,8 +8,8 @@ public class ConjuredManaCake extends Item {
     @Override
     public int updateQuality() {
         if (sellIn > 0) {
-            return QualityValidator.validateNotNegativeQuality(quality - 2);
+            return QualityValidator.validateQualityInCorrectRange(quality - 2);
         }
-        return QualityValidator.validateNotNegativeQuality(quality - 4);
+        return QualityValidator.validateQualityInCorrectRange(quality - 4);
     }
 }
