@@ -14,8 +14,24 @@ public class Item {
         this.quality = quality;
     }
 
-   @Override
-   public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
+    public int updateQuality() {
+        if (sellIn > 0) {
+            return QualityValidator.validateNotNegativeQuality(--quality);
+        }
+        return QualityValidator.validateNotNegativeQuality(quality - 2);
+    }
+
+    public int updateSellIn() {
+        return --sellIn;
+    }
+
+    public void updateParameters() {
+        quality = updateQuality();
+        sellIn = updateSellIn();
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + sellIn + ", " + quality;
     }
 }
