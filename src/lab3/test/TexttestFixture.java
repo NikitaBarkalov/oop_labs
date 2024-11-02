@@ -39,12 +39,12 @@ public class TexttestFixture {
                 new ConjuredManaCake(0, 2)                  // sellIn -1, quality 0
             };
 
-        GildedRose app = new GildedRose(items);
+        ParametersUpdater app = new ParametersUpdater(items);
 
         int days = 2;
         for (int numberDay = 0; numberDay < days; numberDay++) {
             Printer.printItems(items, numberDay);
-            app.updateQuality();
+            app.updateAfterDay();
         }
     }
 

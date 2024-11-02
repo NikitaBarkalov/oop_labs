@@ -1,13 +1,13 @@
 package lab3.main;
 
-public class GildedRose {
+public class ParametersUpdater {
     public Item[] items;
 
-    public GildedRose(Item[] items) {
+    public ParametersUpdater(Item[] items) {
         this.items = items;
     }
 
-    public void updateQuality() {
+    public void updateAfterDay() {
         for (Item item: items) {
             item.updateParameters();
         }
