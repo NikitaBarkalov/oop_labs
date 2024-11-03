@@ -16,6 +16,7 @@ public class QualityValidator {
     }
 
     public static int validateQualityInCorrectRange(int quality) {
+        // quality validates range from 0 to 50
         quality = validateNotNegativeQuality(quality);
         quality = validateNotMoreThan50Quality(quality);
         return quality;

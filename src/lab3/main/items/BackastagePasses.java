@@ -9,6 +9,7 @@ public class BackastagePasses extends Item {
 
     @Override
     public int updateQuality() {
+        // quality changes respond to which range contains sellIn
         quality = updateQualityWhenSellInMoreThan10();
         quality = updateQualityWhenSellInBetween5And10();
         quality = updateQualityWhenSellInBetween0And5();

@@ -7,16 +7,19 @@ public class Sulfuras extends Item {
 
     @Override
     public int updateQuality() {
+        // do nothing because it's a legendary item
         return quality;
     }
 
     @Override
     public int updateSellIn() {
+        // do nothing because it's a legendary item
         return sellIn;
     }
 
     @Override
     public void updateParameters() {
+        // do nothing because it's a legendary item
         return;
     }
 }
