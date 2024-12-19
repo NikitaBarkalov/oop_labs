@@ -1,6 +1,7 @@
 package lab5.main.java.decorator;
 
 import lab5.main.java.image.*;
+import lab5.main.java.support.*;
 
 public class SizeDecorator extends EffectDecorator {
     private int newWidth;
@@ -24,8 +25,11 @@ public class SizeDecorator extends EffectDecorator {
     }
 
     private GraphicFile updateSize(int newWidth, int newHeight) {
-        this.wrappedImage.setWidth(newWidth);
-        this.wrappedImage.setHeight(newHeight);
+        Validator integerValidator = new Validator();
+        int newValidWidth = integerValidator.validateIntegerBySign(this.wrappedImage.getWidth(), newWidth);
+        int newValidHeight = integerValidator.validateIntegerBySign(this.wrappedImage.getHeight(), newHeight);
+        this.wrappedImage.setWidth(newValidWidth);
+        this.wrappedImage.setHeight(newValidHeight);
         return this.wrappedImage;
     }
 }
