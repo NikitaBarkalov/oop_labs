@@ -19,4 +19,24 @@ public class CompressionTest {
         Compression compression1 = new LossyCompression();
         assertEquals(0.2, compression1.executeCompressing(image1));
     }
+
+    @Test
+    public void whenImageAlreadyCompressed_thenLosslessCompressionIsNotChangedSizeMemory() {
+        Image image1 = new Image("photo1", 960, 1080, 1);
+        Compression compression1 = new LosslessCompression();
+        double newSize = compression1.executeCompressing(image1);
+        image1.setNewSizeMemory(newSize);
+        Compression compression2 = new LosslessCompression();
+        assertEquals(0.5, compression2.executeCompressing(image1));
+    }
+
+    @Test
+    public void whenImageAlreadyCompressed_thenLossyCompressionIsNotChangedSizeMemory() {
+        Image image1 = new Image("photo1", 960, 1080, 1);
+        Compression compression1 = new LossyCompression();
+        double newSize = compression1.executeCompressing(image1);
+        image1.setNewSizeMemory(newSize);
+        Compression compression2 = new LossyCompression();
+        assertEquals(0.2, compression2.executeCompressing(image1));
+    }
 }
