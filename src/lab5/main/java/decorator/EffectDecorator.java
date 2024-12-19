@@ -30,8 +30,8 @@ public class EffectDecorator implements GraphicFile {
     }
 
     @Override
-    public boolean isImageCompressed() {
-        return wrappedImage.isImageCompressed();
+    public boolean isFileCompressed() {
+        return wrappedImage.isFileCompressed();
     }
 
     @Override
@@ -52,5 +52,20 @@ public class EffectDecorator implements GraphicFile {
     @Override
     public int setHeight(int newHeight) {
         return wrappedImage.setHeight(newHeight);
+    }
+
+    @Override
+    public String getWaterMark() {
+        return wrappedImage.getWaterMark();
+    }
+
+    @Override
+    public boolean isFileWaterMarked() {
+        return wrappedImage.isFileWaterMarked();
+    }
+
+    @Override
+    public String setWaterMark(String newWaterMark) {
+        return wrappedImage.setWaterMark(newWaterMark);
     }
 }

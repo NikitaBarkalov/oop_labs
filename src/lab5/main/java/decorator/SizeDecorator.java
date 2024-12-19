@@ -26,8 +26,8 @@ public class SizeDecorator extends EffectDecorator {
 
     private GraphicFile updateSize(int newWidth, int newHeight) {
         Validator integerValidator = new Validator();
-        int newValidWidth = integerValidator.validateIntegerBySign(this.wrappedImage.getWidth(), newWidth);
-        int newValidHeight = integerValidator.validateIntegerBySign(this.wrappedImage.getHeight(), newHeight);
+        int newValidWidth = integerValidator.validateIntegerBySign(wrappedImage.getWidth(), newWidth);
+        int newValidHeight = integerValidator.validateIntegerBySign(wrappedImage.getHeight(), newHeight);
         this.wrappedImage.setWidth(newValidWidth);
         this.wrappedImage.setHeight(newValidHeight);
         return this.wrappedImage;

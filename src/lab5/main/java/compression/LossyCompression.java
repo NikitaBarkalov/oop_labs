@@ -6,7 +6,7 @@ public class LossyCompression implements Compression {
     @Override
     public Image executeCompressing(Image image) {
         double sizeMemory = image.getSizeMemory();
-        if (image.isImageCompressed()) {
+        if (image.isFileCompressed()) {
             return image;
         }
         image.setNewCompressingStatus(true);
