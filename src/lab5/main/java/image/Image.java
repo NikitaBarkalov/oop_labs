@@ -1,6 +1,6 @@
 package lab5.main.java.image;
 
-public class Image {
+public class Image implements GraphicFile {
     private String name;
     private int width;
     private int height;
@@ -43,5 +43,15 @@ public class Image {
     public boolean setNewCompressingStatus(boolean isCompressed) {
         this.isCompressed = isCompressed;
         return isCompressed;
+    }
+
+    public int setWidth(int newWidth) {
+        this.width = newWidth;
+        return newWidth;
+    }
+
+    public int setHeight(int newHeight) {
+        this.height = newHeight;
+        return newHeight;
     }
 }
