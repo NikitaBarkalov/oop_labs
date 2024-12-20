@@ -1,4 +1,4 @@
-package lab5.main.java.support;
+package lab5.main.java.helper;
 
 public class Validator {
     public int validateIntegerBySign(int oldInteger, int newInteger) {

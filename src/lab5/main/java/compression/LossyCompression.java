@@ -4,7 +4,7 @@ import lab5.main.java.image.*;
 
 public class LossyCompression implements Compression {
     @Override
-    public Image executeCompressing(Image image) {
+    public GraphicFile executeCompressing(GraphicFile image) {
         double sizeMemory = image.getSizeMemory();
         if (image.isFileCompressed()) {
             return image;

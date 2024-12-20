@@ -9,7 +9,9 @@ public class WaterMarkDecoratorTest {
     @Test
     public void whenFileIsWaterMarked_thenWaterMarkIsCorrectChanged() {
         GraphicFile image1 = new Image("photo1", 960, 1080, 1);
+
         image1 = new WaterMarkDecorator(image1, "Label1");
+        
         assertEquals("Label1", image1.getWaterMark());
     }
 }

@@ -14,7 +14,7 @@ public class ContextCompression {
         return typeCompression;
     }
 
-    public Image executeCompression(Image image) {
+    public GraphicFile executeCompression(GraphicFile image) {
         return typeCompression.executeCompressing(image);
     }
 }

@@ -1,10 +1,10 @@
 package lab5.main.java.compression;
 
-import lab5.main.java.image.Image;
+import lab5.main.java.image.*;
 
 public class LosslessCompression implements Compression {
     @Override
-    public Image executeCompressing(Image image) {
+    public GraphicFile executeCompressing(GraphicFile image) {
         double sizeMemory = image.getSizeMemory();
         if (image.isFileCompressed()) {
             return image;

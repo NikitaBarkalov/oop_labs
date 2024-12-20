@@ -1,7 +1,7 @@
 package lab5.main.java.decorator;
 
+import lab5.main.java.helper.*;
 import lab5.main.java.image.*;
-import lab5.main.java.support.*;
 
 public class SizeDecorator extends EffectDecorator {
     private int newWidth;
